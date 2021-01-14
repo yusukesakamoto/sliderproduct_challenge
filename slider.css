@@ -1,0 +1,35 @@
+#slider-container {
+    position: relative;
+    width: 420px;
+    height:283px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+ul {
+  position: absolute;
+  width: 10000px;
+  height: auto;
+  margin: 0;
+  padding: 0; 
+  font-size: 0;
+  transition: ease 1s;
+  transform: translateX(0);
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    font-size: 0;
+}
+
+img {
+    vertical-align: top;
+}
+
+#buttonArea {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto;
+}
