@@ -6,32 +6,52 @@ let slidecount;
 let slidecopy;
 let slidescore = 1;
 let clonescore = 0;
+let distance = 0;
+
+let slideinterval;
 
 next.addEventListener('click',function(){
 
 slideall = document.querySelectorAll('#slider-container ul li');
 
-slidecount = slideall.length;
-slidecopy = slideall[clonescore].cloneNode(true);
-slideul.appendChild(slidecopy);
-slideul.style.transform = "translateX(" + -420 * (slidescore) + "px)";
-slidescore++;
-clonescore++;
+slideinterval =
+setInterval(() => {
+    if(distance < 420 * slidescore) {
 
-console.log(slidescore);
-console.log(clonescore);
+        distance = distance + 20;
 
+        slideul.style.marginLeft = -(distance) + "px";
+    } else {
+        clearInterval(slideinterval);
+        slidescore++;
 
-
-if(slidescore === 4) {
-    slidescore = 1;
-    for(var i = 0;i < 3;i++){
-        console.log("動いてる");
-        slideall = document.querySelectorAll('#slider-container ul li');
-        slideall[0].remove();
+        if(slidescore === 4) {
+            slidescore = 1;
+            slideul.style.marginLeft = 0 + "px";
+            distance = 0;
+    } else {
+        
     }
-    slideul.style.transform = "translateX(" + 0 + "px)";
-    clonescore = 0;
-}
+    }
+}, 5);
 
 },false);
+
+prev.addEventListener('click',function(){
+    if(slidescore === 1) {
+        distance = 420 * 3;
+        slideul.style.marginLeft = -(3 * 420) + "px";
+        slidescore = 3;
+    } else {
+        slidescore--;
+    }
+
+        slideinterval = setInterval(() => {
+            if(distance > 420 * (slidescore - 1 )) {
+                distance = distance - 20;
+                slideul.style.marginLeft = -(distance) + "px";
+            }
+        }, 5); 
+    
+
+});
