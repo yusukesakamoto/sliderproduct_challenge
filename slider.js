@@ -50,6 +50,8 @@ prev.addEventListener('click',function(){
             if(distance > 420 * (slidescore - 1 )) {
                 distance = distance - 20;
                 slideul.style.marginLeft = -(distance) + "px";
+            } else {
+                clearInterval(slideinterval);
             }
         }, 5); 
     
