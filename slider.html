@@ -1,29 +1,118 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="slider.css">
-    <title>jsSlider</title>
-</head>
-<body>
-    <div id="kotukei">
-    <div id="slider-container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ファビコン -->
+    <link rel="icon" href="images/favicon.ico" />
+
+    <!-- スマホ用アイコン -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png" />
+    <link rel="stylesheet" href="../../css/style.css?201228" />
+    <link rel="stylesheet" href="../../css/page.css" />
+    <link rel="stylesheet" href="slider.css" />
+    <title>
+      歯車-フロントエンドエンジニア祐介のポートフォリオ-鍛錬作-ループスライダー
+    </title>
+    <meta
+      name="description"
+      content="フロントエンドエンジニア祐介の技術共有サイトの鍛錬作。祐介が自力で作ったループスライダー！"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@yusuke_saka" />
+    <meta
+      property="og:title"
+      content="歯車-フロントエンドエンジニア祐介のポートフォリオ-ループスライダー"
+    />
+    <meta
+      property="og:description"
+      content="祐介が自力で作ったループスライダー！"
+    />
+    <meta
+      property="og:image"
+      content="https://yusukecode.com/images/_twittercard.jpg"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="https://yusukecode.com/"
+        ><h1>
+          <img
+            src="../../images/logo.png"
+            alt="歯車-フロントエンドエンジニア祐介のポートフォリオ"
+          /></h1
+      ></a>
+      <nav>
         <ul>
-            <li><img src="img/springs1.jpg" alt="スライド1写真"></li><li>
-                <img src="img/springs2.jpg" alt="スライド2写真"></li><li>
-                    <img src="img/springs3.jpg" alt="スライド3写真"></li><li>
-                        <img src="img/springs1.jpg" alt="スライド1写真"></li>
-                    
+          <li><a href="/">プロフィール</a></li>
+          <li><a href="works.html">実績</a></li>
+          <li><a href="gadget.html">鍛錬作</a></li>
+          <li><a href="blog">ブログ</a></li>
         </ul>
+      </nav>
+      <div id="outinMenu">
+        <div class="dli-close closeswitch"></div>
+        <nav>
+          <ul>
+            <li>
+              <a href="/" class="closeswitch">プロフィール</a>
+            </li>
+            <li>
+              <a href="works.html" class="closeswitch">実績</a>
+            </li>
+            <li>
+              <a href="gadget.html" class="closeswitch">鍛錬作</a>
+            </li>
+            <li>
+              <a href="blog" class="closeswitch">ブログ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div id="spMenu">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+        <p>MENU</p>
+      </div>
+    </header>
+
+    <div id="mainback">
+      <main>
+        <p><a href="gadget.html">鍛錬作</a> > ループスライダー</p>
+
+        <section id="variablecontentArea">
+          <h2><strong>ループスライダー</strong><span>Loop Slider</span></h2>
+
+          <div id="slider-container">
+            <ul>
+              <li><img src="img/slide1.jpg" alt="スライド1写真" /></li>
+              <li>
+                <img src="img/slide2.jpg" alt="スライド2写真" />
+              </li>
+              <li>
+                <img src="img/slide3.jpg" alt="スライド3写真" />
+              </li>
+            </ul>
+          </div>
+
+          <div id="buttonArea">
+            <button id="prev" class="btn">prev</button>
+            <button id="next" class="btn">next</button>
+          </div>
+
+          <p class="topa">
+            <a href="../../gadget.html">鍛錬作に戻る</a>
+          </p>
+        </section>
+      </main>
     </div>
 
-</div>
-    <div id="buttonArea">
-        <button id="prev">prev</button>
-        <button id="next">next</button>
-    </div>
-    
+    <footer>
+      <small>&copy;This site is Yusuke's portfolio</small>
+    </footer>
+
     <script src="slider.js"></script>
-</body>
+  </body>
 </html>
